@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex26-11</title>
+</head>
+<body>
+    <h1>ex26-11.html</h1>
+    <h3>p474 화살표 함수</h3>
+    <script>
+
+        const multiply = (x, y) => x * y; // 화살표 함수(ES6)
+
+        //function = ( => )
+        // x * y를 감싸는 중괄호가 없다면 return을 작성하지 않아도 된다.
+
+        const multiply2 = function(x, y){ // 화살표 함수(ES5)
+            return x * y;
+        }
+
+        console.log(multiply(2, 4));
+        console.log(multiply2(2, 4));
+
+        const power = x => x ** 2; // **: 제곱근
+        // 소괄호는 인자가 한 개일 때만 생략 가능
+
+        const power2 = function(x){
+            return x ** 2;
+        }
+
+        console.log(power(5));
+
+    </script>
+</body>
+</html>

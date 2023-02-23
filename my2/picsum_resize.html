@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picsum_resize</title>
+</head>
+<body>
+    <h1>picsum_resize.html</h1>
+    <div id="content"></div>
+
+    <script>
+
+        // https://picsum.photos/
+
+        const contentElem = document.getElementById('content');
+
+        fetch('https://picsum.photos/v2/list')
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){
+            // console.log(data);
+            makeList(data);
+        });
+
+        function makeList(data){
+            data.forEach(function(item){
+                console.log(item);
+                makeItem(item);
+            });
+        }
+
+        function makeItem(item){ // 객체가 넘어옴
+            const img = document.createElement('img'); // document에 img 태그를 만드는 것
+            const width = parseInt(item.width * 0.2);
+            const height = parseInt(item.height * 0.2);
+            // img.src = item.download_url; // item이 가지고 있는 속성명
+            img.src = `https://picsum.photos/id/${item.id}/${width}/${height}`;
+            img.alt = item.author;
+            contentElem.appendChild(img);
+        }
+
+    </script>
+</body>
+</html>

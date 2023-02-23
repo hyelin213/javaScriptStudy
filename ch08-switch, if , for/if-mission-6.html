@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-mission-6</title>
+</head>
+<body>
+    <h1>if-mission-6.html</h1>
+    <script>
+        /*
+        const val = '1212';
+        const result = isNaN(val); //내장함수
+        console.log(result); -> 숫자
+
+        const val2 = '12a12';
+        const result2 = isNaN(val2);
+        console.log(result2); -> 문자열
+        */
+
+        const val = prompt(); //내장함수, 문자열로 console에 입력 됨
+
+        // console.log(val);
+
+        if(isNaN(val)){
+            console.log(val);
+        } else {
+            const result = parseInt(val);
+            console.log(result + 10);
+            // console.log(parseInt(val) + 10);
+        }
+
+        // 변수를 사용했을 때
+
+        let bal = prompt();
+
+        if(!isNaN(bal)){
+            bal = parseInt(bal) + 10;
+        }
+    </script>
+</body>
+</html>

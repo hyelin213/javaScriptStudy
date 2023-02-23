@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-71</title>
+</head>
+<body>
+    <h1>ex39-71.html</h1>
+    <input type="text" id="user" value="ungmo2" class="abc">
+    <script>
+
+        const userElem = document.getElementById('user'); // input
+
+        const { attributes } = userElem; // 구조분해할당
+        // const attributes = userElem.attributes(same)
+
+        /*
+        console.dir(userElem.attributes);
+        console.log(attributes);
+
+        console.log(attributes.type.value);
+        console.log(attributes.id.value);
+        console.log(attributes.value.value);
+        
+        굳이 이런 과정을 거치지 않아도 된다.
+        */
+
+        userElem.className = 'hello'; // 값 교체, class 이름 바꾸는 것
+
+        console.log(userElem.value); // 값 읽기
+        console.log(userElem.id);
+        console.log(userElem.type);
+        console.log(userElem.className);
+
+        userElem.value = '반가버';
+        // userElem.type = 'radio';
+
+        /*
+            1. Element에 접근하기 위해 주소값을 알기
+            2. value 값을 가장 많이 건드림(바꾸거나 가져오는 일)
+        */
+
+    </script>
+</body>
+</html>

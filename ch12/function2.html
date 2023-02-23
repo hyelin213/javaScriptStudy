@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+<body>
+    <h1>function1.html</h1>
+    <script>
+
+        function sum(n1, n2=1){ // 리터럴값 넣기 가능
+            return n1 + n2;
+        }
+
+        /*
+        function sum(n1, n2){
+            return n1 * n2;
+        } // => 가장 나중에 작성한 함수가 적용되어버림
+        */
+
+        console.log(sum(10, 20));
+        console.log(sum(10, 20, 30));
+        /*
+            객체지향 언어의 특징
+        
+            오버로딩
+            : 같은 이름의 함수명을 여러개 만들 수 있음(인자로 구분)
+            => 자바스크립트는 예외되어 에러가 터지지 않음 (갯수가 더 많아도 무시 되어 값 도출)
+        */
+
+        console.log('sum(10):' + sum(10)); // => 에러 대신 NaN 
+        //                                       : function sum(n1(10), n2(undefined)){ ... }
+
+        console.log('=======================================================')
+
+        function multi(){
+            // multi() : 다른 언어는 무조건 내용이 있어야하지만 자바스크립트는 비워둘 수 있다
+            console.log('len : ' + arguments.length);
+            console.log(arguments[0]); // 유사배열화
+            console.log(arguments[1]);
+        }
+        console.log(multi(4));
+        console.log(multi(4, 8));
+
+    </script>
+</body>
+</html>

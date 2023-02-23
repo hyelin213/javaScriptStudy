@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-69</title>
+</head>
+<body>
+    <h1>ex39-69.html</h1>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <script>
+
+        // 노드 삭제
+
+        // 부모요소가 자식요소를 지울 때
+        const fruitsElem = document.querySelector('#fruits');
+        fruitsElem.removeChild(fruitsElem.firstElementChild);
+        // 한 번 더 실행하면 Banana도 사라짐(Banana가 first이자 last)
+        
+        // 주소값을 알고, 자신을 지우고 싶을 때
+        fruitsElem.firstElementChild.remove();
+
+    </script>
+</body>
+</html>

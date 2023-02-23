@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06-01</title>
+</head>
+<body>
+    <h1>ex06-01.html</h1>
+    <script>
+
+        var integer = 10; //정수
+        var double = 10.12; //실수
+        var negative = -20; //음수
+
+        var binary = 0b01010; //이진수
+        var octal = 0o101; //팔진수
+        var hex = 0x1112A; //십육진수
+
+        //비교 연산자
+        console.log(2 > 2);
+        console.log(2 >= 2);
+        console.log(2 < 2);
+        console.log(2 <= 2);
+        console.log(2 == 2);
+        console.log('2 == 2 :' + (2 == 2)); // ==보다 ===을 쓰기(!=도 마찬가지)
+        console.log('2 != 3 :' + (2 != 3)); //not
+        console.log("2 == '2' :" + (2 == '2')); //자동형변환
+        console.log("2 === '2' :" + (2 === '2'));
+        console.log("2 !== '2' :" + (2 !== '2'));
+
+        //나누기
+        console.log(4 / 2);
+        console.log(3 / 2);
+        console.log(parseInt(3 / 2)); //정수만 도출
+
+        console.log(10 / 0); //무한대여서 Infinity로 뜸
+        console.log(10 / -0);
+        console.log(33 / 'dd');
+
+        var x = NaN; //대소문자 가림(SQL은 안 가림)
+
+    </script>
+</body>
+</html>

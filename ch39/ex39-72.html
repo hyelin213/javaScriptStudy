@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-72</title>
+</head>
+<body>
+    <h1>ex39-72.html</h1>
+    <input type="text" id="user" value="ungmo2" class="abc" green="123">
+    <script>
+
+        // getAttribute: 속성 건드는 것을 더 안전하게.
+
+        const userElem = document.getElementById('user');
+
+        const val = userElem.getAttribute('value'); // 안전한 방법(문자열이기 때문에 반복문에 용이)
+        // const val = userElem.value;(same) // 에러가 터질 확률이 높음
+        console.log(val);
+
+        const val2 = userElem.getAttribute('green'); // 지정 속성도 불러옴
+        // const val = userElem.green; // undefined
+        console.log(val2);
+
+        userElem.setAttribute('value', '반가버'); // (key, value)
+        // userElem.value = '반가버';(same);
+
+        /*
+            setAttribute -> void 주는 것
+            getAttribute -> return 받는 것
+
+            ex) 전당포 예시
+
+            userElem.setAttribute('value', '반가버');
+                : 나 value인데 '반가버' 맡기께
+            const val = userElem.getAttribute('value');
+                : 나 value인데 내가 맡긴 거 줭(화면에 나옴)
+        */
+
+        console.log(userElem.hasAttribute('green')); // hasAttribute: 이 속성 가지고 있니? 확인용
+        console.log(userElem.hasAttribute('ddd')); // null 체크할 때 사용
+       
+    </script>
+</body>
+</html>

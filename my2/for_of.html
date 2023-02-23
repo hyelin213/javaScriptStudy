@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_of</title>
+</head>
+<body>
+    <h1>for_of.html</h1>
+    <script>
+
+        const arr = ['A', 'B', 'C'];
+        for(const item of arr){
+            console.log(item);
+        } // for of문
+
+        // arr이 유사배열이었다면
+
+        const arr2 = [ ...arr ]; // 진짜 배열로 바꿀 수 있다. -> forEach를 사용하기 위함
+
+    </script>
+</body>
+</html>

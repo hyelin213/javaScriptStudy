@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for-mission-9</title>
+</head>
+<body>
+    <h1>for-mission-9.html</h1>
+    <script>
+        
+        const star = parseInt(prompt('찍고 싶은 별 수를 입력해 주세요.'));
+        let str = '';
+        
+        // false의 수가 뜰 때까지 반복된다.
+
+        for(var i = 1; i <= star; i++){
+            for(var z = 1; z <= i; z++){
+                str += '*';
+            }
+            str += '\n';
+        }
+
+        for(var j = 1; j <= star; j++){
+            for(var k=star; k > j; k--){
+                str += '*'
+            }
+            str += '\n';
+        }
+
+        for(var i = 0; i <= star; i++){
+            for(var z = star; z > i; z--){
+                str += '*';
+            }
+            str += '\n';
+        }
+        for(var i = 0; i < star; i++){
+            for(var z = 0; z <= i; z++){
+                str += '*';
+            }
+            str += '\n';
+        }
+
+        console.log(str);
+
+        console.log('=======Tzone');
+
+        let str2 = '';
+        for(var i=1; i<=star; i++){
+            for(var z=0; z<i; z++){
+                str2 += '*';
+            }
+            str2 += '\n';
+        }
+        console.log(str2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr-mission-4</title>
+</head>
+<body>
+    <h1>arr-mission-4.html</h1>
+    <script>
+
+        /*
+            배열 search
+            arr 배열에서 오른쪽에서 가장 빨리 만나는
+            SEARCH_VAL값이 몇 번방에 있는지 알아내세요.
+            for문 끝나고 콘솔에 출력해 주세요.
+            없는 값은 -1
+        */
+
+        const arr = [100, 200, 300, 400, 500, 300, 400]; //0~6
+        const SEARCH_VAL = 400;
+
+        // arr.length는 1부터 셈
+        
+        let result = -1;
+
+        for(var i=arr.length-1; i>=0; i--){
+            if(arr[i] === SEARCH_VAL){
+                result = i;
+                break;
+            }
+        }
+        console.log(result);
+
+    </script>
+</body>
+</html>

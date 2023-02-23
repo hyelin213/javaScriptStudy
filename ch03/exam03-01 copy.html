@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter 해보기</title>
+</head>
+<body>
+    <h1>exam03-01.html</h1>
+    <div id="counter">0</div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+
+    <script>
+        const COUNTER = document.getElementById('counter');
+        const INCREASE = document.getElementById('increase');
+        const DECREASE = document.getElementById('decrease');
+
+        // let num = parseInt(COUNTER.innerText); -> 직접형 변환
+        let num = COUNTER.innerText
+        num = Number(num)
+
+        function render(){
+            COUNTER.innerText = num;
+        }
+
+        INCREASE.addEventListener('click', function(){
+            num++;
+            render();
+        });
+        DECREASE.addEventListener('click', function(){
+            num--;
+            render();
+        });
+
+    </script>
+</body>
+</html>

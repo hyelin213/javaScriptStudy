@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr4</title>
+</head>
+<body>
+    <h1>arr4.html</h1>
+    <h4>2차원 배열</h4>
+    <script>
+
+        const arr = [ // arr의 자식은 3개다 (line 14, 15, 16)
+            [100, 200, 300, 400], // 0 - 4개
+            [500, 600, 700, 800, 850], // 1 - 5개
+            [900, 1000, 1100, 1200, 1300, 1400], // 2 - 6개
+        ];
+
+        for(let i = 0; i<arr.length; i++){
+            for(let z = 0; z<arr[i].length; z++){
+                console.log(arr[i][z]);
+            }
+        }
+
+
+        const arr2 = [100, 200, 300, 400]
+
+        console.log(arr[0][2]); // 300 / row - column
+        console.log(arr.length); // 3
+
+        console.log(arr[0]); // 가로 줄
+        console.log(arr2.length);
+
+        console.log(arr[0][1]);
+        console.log(arr[1]);
+
+    </script>
+</body>
+</html>

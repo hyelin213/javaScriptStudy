@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>index.html</h1>
+    <h3>p124</h3>
+    <script>
+
+        // 객체지향은 현실 세계를 반영한 느낌임
+
+        var person = {
+            name: 'Lee',
+            age: 20
+        };
+
+        var counter = {
+            num: 0, // 프로퍼티(속성): 객체의 상태를 나타내는 값(data), 명사 담당
+            increase: function(){
+                this.num++;
+            } // 메서드 : 프로퍼티(속성)를 참조하고 조작할 수 있는 동작(behavior)(외부값도 가능), 동사 담당
+        };
+
+        console.log(counter.num);
+        counter.increase();
+        counter.increase();
+        console.log(counter.num);
+
+        var util = {
+            sum: function(n1, n2){
+                return n1 + n2;
+            }
+        }
+
+        const result = util.sum(10, 20);
+        console.log(result);
+        
+    </script>
+</body>
+</html>

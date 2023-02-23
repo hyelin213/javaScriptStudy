@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-90</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: antiquewhite;
+        }
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>ex39-90.html</h1>
+    <div class="box red">Hello World!</div>
+    <script>
+
+        // classList > replace, toggle, add, remove, contains
+
+        const divElem = document.querySelector('.box');
+        console.log(divElem.classList); // 유사 배열
+        
+        // divElem.classList.replace('red', 'blue'); // 기존 값 교체
+        // divElem.classList.toggle('red'); // toggle: 있으면 빼고, 없으면 넣는다.
+        // divElem.classList.add('red'); // 이미 있는 것은 무시됨
+        // divElem.classList.remove('box'); // 해당 속성 삭제
+        
+        // console.log(divElem.classList.item(0)); // 쓸 일... 없을듯?
+
+        console.log(divElem.classList.contains('box')); // boolean 타입
+        console.log(divElem.classList.contains('pink'));
+
+        // 문자열을 객체 취급하듯 사용됨
+
+    </script>
+</body>
+</html>

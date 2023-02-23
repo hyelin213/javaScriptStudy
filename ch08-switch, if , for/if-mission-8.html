@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-mission-8</title>
+</head>
+<body>
+    <h1>if-mission-8.html</h1>
+    <script>
+
+        const score = parseInt(prompt());
+        let cls = 'F';
+        let unit = '';
+
+        if(score >= 90){
+            cls ='A';
+        } else if(score >= 80){
+            cls ='B';
+        } else if(score >= 70){
+            cls ='C';
+        } else if(score >= 60){
+            cls ='D';
+        }
+
+        if(score >= 60){
+            const modVal = score % 10; //자주 씀 (nn의 자리수 구하기)
+            if(score === 100 || modVal >= 7){
+                unit = '+';
+            } else if(modVal <= 3){
+                unit = '-';
+            }
+        }
+
+        console.log(`${cls}${unit}`)
+
+        /*
+        let aa = '';
+
+        if(score >= 90){
+            aa ='A';
+        } else if(score >= 80){
+            aa ='B';
+        } else if(score >= 70){
+            aa ='C';
+        } else if(score >= 60){
+            aa ='D';
+        } else {
+            aa ='F';
+        }
+
+
+        if(score > 59){
+            if(score % 10 > 6){
+                console.log(aa + '+');
+            } else if (score % 10 < 4){
+                console.log(aa + '-');
+            }
+        } else {
+            console.log(aa);
+        }
+        */
+
+        /* ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+        if(score >= 90){
+            if(score < 94){
+                console.log('A-');
+            } else if(score < 97){
+                console.log('A');
+            } else if(score < 101){
+                console.log('A+')
+            }
+        } else if(score >= 80){
+            if(score < 84){
+                console.log('B-');
+            } else if(score < 87){
+                console.log('B');
+            } else if(score < 90){
+                console.log('B+')
+            }
+        } else if(score >= 70){
+            if(score < 74){
+                console.log('C-');
+            } else if(score < 77){
+                console.log('C');
+            } else if(score < 80){
+                console.log('C+')
+            }
+        } else if(score >= 60){
+            if(score < 64){
+                console.log('D-');
+            } else if(score < 67){
+                console.log('D');
+            } else if(score < 70){
+                console.log('D+')
+            }
+        } else {
+            console.log('F')
+        }
+        */
+
+        
+
+        
+
+    </script>
+</body>
+</html>

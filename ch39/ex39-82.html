@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-82</title>
+</head>
+<body>
+    <h1>ex39-82.html</h1>
+    <h3>p744</h3>
+    <ul class="users">
+        <li id="li_1" data-user-id="7621" data-role="admin">Lee</li>
+        <li id="li_2" data-userid="9524" data-role="subscriber">Kim</li>
+    </ul>
+    <script>
+
+        const li_1Elem = document.querySelector('#li_1');
+        console.log(li_1Elem.dataset.userId);
+
+        // * data- : 접두어, dataset(객체)에서 관리함. 대문자를 쓰지 못한다(dash 사용)
+        // 불러올 때는 data-user-id => dataset.userId
+
+        console.log(li_1Elem.dataset.role);
+
+        // 구분할에 용이함
+        const { userId, role } = li_1Elem.dataset;
+        console.log(userId);
+        console.log(role);
+
+        const li_2Elem = document.querySelector('#li_2');
+        console.log(li_2Elem.dataset.userid);
+        console.log(li_2Elem.dataset.role);
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn4</title>
+</head>
+<body>
+    <h1>fn4.html</h1>
+    <script>
+
+        printPre('안녕하세요', 5);
+        printPre('Hello', 10);
+
+        function printPre(str, num){ // 함수는 무조건 소괄호가 있어야 한다.
+            let result = '';
+            for(let i=0; i<num; i++){
+                result += str + '\n';
+            }
+            console.log(result);
+        }
+        
+        printPre2('안녕하세요_2', 5);
+        printPre2('Hello_2', 10);
+
+        function printPre2(str, num){
+            let result = '';
+            for(let i=0; i<num; i++){
+                result += str + '\n';
+            }
+            console.log(result);
+        }
+
+    </script>
+</body>
+</html>

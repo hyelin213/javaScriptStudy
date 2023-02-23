@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb1_forEach</title>
+</head>
+<body>
+    <h1>cb1_forEach.html</h1>
+    <script>
+
+        const arr = [1, 5, 10, 22, 30, 41, 8];
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+        console.log('============');
+
+        arr.forEach(function(item, idx){ // forEach() : 배열의 length(idx)만큼 출력
+            console.log(`item : ${item}, idx : ${idx}`);
+        });
+
+    </script>
+</body>
+</html>

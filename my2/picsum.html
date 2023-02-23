@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picsum</title>
+</head>
+<body>
+    <h1>picsum.html</h1>
+    <div id="content"></div>
+
+    <script>
+
+        const contentElem = document.getElementById('content');
+        // id값이 content인 태그를 찾아 주소값을 가져와서 저장됨
+
+        // Open API > 인증X > Key값만 준다. => get방식
+        // 인증O => post, put, delete 또한 가능
+
+        // get, post, put, delete > Restful API
+
+        /*
+            백엔드의 CRUD
+                Create
+                Read
+                Update
+                Delete
+                -> 이런 개념을 Restful API에도 부여하는 것
+
+            /board    
+                (get) 화면 뿌리기 = Read
+                (post) 글 등록 = Create
+                (put) 글 수정 (+수정 내용) = Update
+                (delete) 글 삭제 = Delete
+        */
+
+        fetch('https://picsum.photos/v2/list') // promise 객체를 불러줌, 어떤 세팅이 없다면 get방식
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){ // fetch에 작성된 배열의 주소값이 전달됨
+            makeList(data);
+        })
+        .catch(function(result){
+            console.log('catch: ' + result);
+        })
+
+        function makeList(data){ // 배열의 주소값
+            data.forEach(function(item){
+                console.log(item);
+                makeItem(item); // 주소값 전달(아래)
+            });
+        }
+
+        /*
+            fetch 고정 작성법
+
+                fetch().then(function(res){
+                    return res.json();
+                }).then(function(data(예시)){
+
+                });
+
+        */
+        
+        function makeItem(item){ // 객체가 넘어옴
+            const img = document.createElement('img'); // document에 img 태그를 만드는 것
+            img.src = item.download_url; // item이 가지고 있는 속성명
+            img.alt = item.author;
+            // <img src="이미지 주소값" alt="이미지 정보 텍스트">
+
+            contentElem.appendChild(img); // 실행하면 img태그가 화면에 들어감
+            // contentElem.append();
+            /*
+            append: 뒤에 추가하는 뜻
+            ~.appendChild(): 해당 객체에 자식 태그로 img 태그를 붙여라
+            */
+            /*
+            contentElem.appendChild(img); -> 엘레먼트
+            contentElem.append();
+
+            둘의 차이점> appendChild는 '문자열'만 작성할 경우 에러 때문에 표시되지 않음
+            */
+
+            //  contentElem.prepend(); -> 뒤에만 붙는 것?
+        }
+
+    </script>
+</body>
+</html>

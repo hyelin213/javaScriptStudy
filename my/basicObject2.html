@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basicObject2</title>
+</head>
+<body>
+    <h1>basicObject2.html</h1>
+    <script>
+
+        const arrObj = { // 다른 언어와 방식이 다르고 비교적 조금 느리다.
+            '0': 1,
+            1: 5,
+            2: 10,
+            length: 3,
+            // 객체 안에서는 숫자 명시 가능(자바스크립트만의 특징)
+
+            forEach: function(cb){ // forEach 도 메소드로 만들기 가능
+                for(let i=0; i<this.length; i++){
+                    cb(this[i], i, this); // this: 상수
+                }
+                // cb : 매개변수
+                cb(this[1]);
+            }
+        };
+
+        // 객체명에는 주소값이 담긴다.
+        /*
+            return된 것 등은 copy로 이루어진다.(메모리가 계속 쌓임/deep copy)
+            주소값은 64기준 8byte.(shallow copy)
+        */
+        
+        arrObj.forEach(function(item){ // 익명함수
+            console.log('forEach: ' + item);
+        }); // 객체 안에 있는 forEach에게 보내는 callback함수(cb). 값이 들어올 때마다 실행.
+
+        /* ㄴsame :
+        const fn4 = function(item){
+            console.log('forEach: ' + item);
+        }
+        fn4(1);
+        fn4(5);
+        fn4(10);
+        */
+       
+        const attr = 'length';
+        // const attr = '0~2';
+        console.log('attr: ' + arrObj[attr]);
+
+        console.log('=============================');
+
+        console.log(arrObj[0]);
+        console.log(arrObj[1]);
+        console.log(arrObj[2]);
+        // 숫자로만 이루어졌을 때는 .으로 접근할 수 없다. => arrObj.0 (X)
+        console.log(arrObj.length);
+        console.log(arrObj['length']);
+
+    </script>
+</body>
+</html>

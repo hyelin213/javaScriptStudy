@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-30</title>
+    <style>
+        html, body{ height: 100%; }
+    </style>
+</head>
+<body>
+    <h1>ex40-30.html</h1>
+    <p>
+        버블링과 캡처링 이벤트
+        <button>버튼</button>
+    </p>
+    <script>
+
+        const bodyElem = document.querySelector('body');
+        bodyElem.addEventListener('click', () => {
+            console.log('body!');
+        });
+
+        const pElem = document.querySelector('p');
+        pElem.addEventListener('click', () => {
+            console.log('p!');
+        }, true); 
+
+        const buttonElem = document.querySelector('button');
+        buttonElem.addEventListener('click', () => {
+            console.log('button!');
+        }); // 타겟
+
+        /*
+            전파 순서
+            Window - Document - Body - Element
+
+            타겟은 이벤트 조건에 만족된 위치에서 정해진다.
+        */
+
+    </script>
+</body>
+</html>

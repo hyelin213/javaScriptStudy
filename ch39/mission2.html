@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission2</title>
+</head>
+<body>
+    <h1>mission2.html</h1>
+    <ul id="fruits"></ul>
+    <script>
+
+        // createElement, forEach, arrow fn
+        const arr = [ 'Apple', 'Banana', 'Orange', 'Blueberry'];
+        /*
+        const fruitsElem = document.getElementById('fruits');
+
+        for(let i=0; i<arr.length; i++){
+            const liElem = document.createElement('li');
+            arr.forEach(item => liElem.innerHTML = arr[i]);
+            fruitsElem.append(liElem);
+        }
+        */
+        console.log('======================================Tzone');
+        /*
+        const fruitsElem2 = document.querySelector('#fruits')
+
+        arr.forEach(item => {            
+            const liElem2 = document.createElement('li'); // li태그를 만들고
+            liElem2.innerText = item; // li안에 내용을 넣은 후
+            fruitsElem2.append(liElem2); // ul에 추가
+        }); // arr의 length만큼 도출
+        */
+
+        console.log('======================================실습');
+        
+        const fruitsElem3 = document.querySelector('#fruits');
+
+        arr.forEach(item => {
+            const liElem3 = document.createElement('li');
+            liElem3.innerText = item;
+            fruitsElem3.append(liElem3);
+        });
+
+    </script>
+</body>
+</html>

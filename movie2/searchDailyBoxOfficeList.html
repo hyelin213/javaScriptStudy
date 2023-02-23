@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <title>searchDailyBoxOfficeList</title>
+</head>
+<body>
+    <div id="container">
+        <div class="header"></div>
+        <div class="main">
+            <h1>daily boxoffice</h1>
+            <form id="searchFrm">
+                <div>
+                    DATE <input type="date" id="date" name="targetDt">
+                    <input type="button" id="dtButton" value="검색" name="search">
+                    <!--
+                        <button>검색</button>
+                        : type의 default값이 submit이어서 누르면
+                          form이 작동되어 날아감(Ajax를 사용하기 때문에 없어야됨)
+
+                        type="button"을 추가하면 안 날아감
+                    -->
+                </div>
+            </form>
+            <div class="main__body">
+                <div class="listing-card">
+                    <ul class="listing-card__list"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="loading" class="child_center display_none">
+            <img src="img/Loading_icon.gif" alt="loading">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/searchDailyBoxOfficeList.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

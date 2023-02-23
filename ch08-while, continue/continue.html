@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+</head>
+<body>
+    <h1>continue.html</h1>
+    <script>
+
+        for(var i=0; i<10; i++){
+            if(i === 5){
+                continue; // continue를 만나면 뒤의 소스들이 실행되지않고 바로 증감식으로 흐름이 이동한다.
+            }
+            console.log(i);
+        }
+
+        // break는 완전히 중단, continue는 해당 소스만 건너뛰고 다시 반복함
+
+    </script>
+</body>
+</html>

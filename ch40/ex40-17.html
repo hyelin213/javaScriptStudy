@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-17</title>
+    <style>
+        button{
+            border: 1px solid #ccc; background-color: white;
+            padding: 5px 10px; font-weight: 100;
+            transition: .3s;
+        }
+        button:hover{
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ex40-17.html</h1>
+    <button>Click Me!</button>
+    <script>
+
+        // Onclick 이벤트 삭제 예시
+
+        const btnElem = document.querySelector('button');
+        function clkEvent(e) {
+            alert('버튼클릭햇당');
+        }
+
+        btnElem.onclick = clkEvent;
+
+        btnElem.removeEventListener('click', clkEvent); //  적용 안 됨
+
+        btnElem.onclick = null;
+                
+    </script>
+</body>
+</html>

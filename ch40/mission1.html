@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission1</title>
+</head>
+<body>
+    <h1>ToDo-List</h1>
+    <input type="text" placeholder="할 일">
+    <button>등록</button>
+    <ul id="list"></ul>
+    <script>
+
+        /*
+        const inputElem = document.querySelector('input'); // input
+        const btnElem = document.querySelector('button'); // button
+        
+        inputElem.addEventListener('keyup', e => {
+            if(e.key !== 'Enter'){ return; }
+            const listElem = document.querySelector('#list'); // ul
+            const liElem = document.createElement('li'); // li
+            
+            const checkElem = document.createElement('input'); // input
+            checkElem.setAttribute('type', 'checkbox');
+
+            liElem.append(checkElem);
+            liElem.append(inputElem.value);
+            liElem.style.listStyle = 'none';
+
+            inputElem.value = '';
+            listElem.append(liElem);
+
+            checkElem.addEventListener('click', event => {
+                liElem.style.textDecoration = 'line-through';
+            });
+        });
+        */
+
+        // ==================================Tzone;
+
+        const inputElem = document.querySelector('input');
+        const btnElem = document.querySelector('button');
+        const ulElem = document.querySelector('ul');
+
+        // 함수를 단독으로 만든 후 두 개의 이벤트 적용하기
+
+        function addTodoItem(){
+            const val = inputElem.value;
+            const li = document.createElement('li');
+            li.textContent = val;
+            li.style.listStyle = 'none';
+            
+            ulElem.append(li);
+            inputElem.value = null; // '' 빈 문자열 넣어도 됨
+
+            // checkbox 추가
+            const check = document.createElement('input');
+            
+            check.setAttribute('type', 'checkbox');
+            li.prepend(check);
+
+            // checkbox 효과
+            check.addEventListener('click', e => {
+                if(check.checked){
+                    li.style.textDecoration = 'line-through';
+                    li.style.color = '#ddd';
+                } else {
+                    li.style.textDecoration = 'none';
+                    li.style.color = '#000';
+                }
+            });
+        }
+
+        // enter 했을 때
+        inputElem.addEventListener('keyup', e => {
+            if(e.key === 'Enter'){
+                addTodoItem();
+            }
+        });
+
+        // button 클릭했을 때
+        btnElem.addEventListener('click', addTodoItem); // 참조 값이 넘어오는 것
+        // addTodoItem(): 결과 값이 넘어옴. 이 상황에 넣었다면 undefined
+        // 호출을 하려면 함수(function)가 있어야한다.
+
+    </script>
+</body>
+</html>

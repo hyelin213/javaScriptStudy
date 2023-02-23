@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10-6</title>
+</head>
+<body>
+    <h1>ex10-6.html</h1>
+    <script>
+
+        var circle = {
+            radius: 5,
+            getDiameter: function(){
+                return 2 * this.radius;
+            }
+        };
+
+        circle.radius = 7; // 수정 가능
+        const result = circle.getDiameter();
+        
+        console.log(result);
+        console.log(circle.getDiameter());
+        console.log(circle['getDiameter']()); // 특수한 경우에 사용
+        console.log(circle['radius']); // radius라는 문자열을 찾으려고 하기 때문에 해당 값이 출력된다.
+        // console.log(circle[radius]) -> 선언된 적이 없기 때문에 에러가 발생한다.
+        
+    </script>
+</body>
+</html>

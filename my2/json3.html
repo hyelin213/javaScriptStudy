@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json3</title>
+</head>
+<body>
+    <h1>json3.html</h1>
+    <script>
+
+        const human = {
+            "name": "홍길동",
+            "age": 22,
+            "local": "대구"
+        };
+
+        const human2 = {
+            "name": "신사임당",
+            "age": 24,
+            "local": "서울"
+        };
+
+        const arr = [human, human2]; // 배열 안에 객체도 넣을 수 있음
+        // JAVA에서는 배열을 {}(중괄호) 사용
+        console.log(arr);
+
+        const strArr = JSON.stringify(arr);
+        console.log(strArr);
+
+        const arr2 = JSON.parse(strArr);
+        console.log(arr2);
+        
+    </script>
+</body>
+</html>

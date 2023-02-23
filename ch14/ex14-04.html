@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14-04</title>
+</head>
+<body>
+    <h1>ex14-04.html</h1>
+    <h4>p205 즉시 실행 함수</h4>
+    <script>
+
+        // lib1
+        (function(){
+            var foo = 10;
+            function printFoo(){
+                console.log(foo);
+            }
+            printFoo();
+        })();
+        // (...)();
+
+        // my/runFn.html 참고
+        // 즉시 실행 함수는 스코프문제로 인해 사용됨(라이브러리 사용 등)
+
+        // lib2
+        var foo = 20;
+
+        // 사용
+        printFoo();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-41</title>
+</head>
+<body>
+    <h1>ex39-41.html</h1>
+    <div id="foo1">hello <span>world!!</span></div>
+    <div id="foo2">hello <span>world!!</span></div>
+    <script>
+
+        const fooElem1 = document.querySelector('#foo1');
+        const fooElem2 = document.querySelector('#foo2');
+        const fooCtnt = fooElem2.innerHTML; // 모든 것을 가져옴
+        console.log(fooCtnt);
+
+        const fooCtnt2 = fooElem2.innerText; // 순수하게 텍스트만 가져옴
+        console.log(fooCtnt2);
+
+        fooElem1.innerHTML = `<h2>반가버</h2>`;
+
+        fooElem2.innerText = `<h2>반가버</h2>`; // -> &lt;h2&gt;
+
+        // &copy;(ⓒ) &nbsp;(space(1)) &amp;(&)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbleSort</title>
+</head>
+<body>
+    <h1>bubbleSort.html</h1>
+    <script>
+
+        const arr = [45, 12, 5, 33, 21, 1, 9, 17]; // item : 원소
+
+        for(let i=0; i<arr.length-1; i++){
+            let idx = i;
+            for(let z=i+1; z<arr.length; z++){
+                if(arr[idx] > arr[z]){
+                    idx = z;
+                }
+            }
+            if(i !== idx){
+                const temp = arr[idx];
+                arr[idx] = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        console.log(arr.toLocaleString());
+
+    </script>
+</body>
+</html>

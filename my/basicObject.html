@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basicObject</title>
+</head>
+<body>
+    <h1>basicObject.html</h1>
+    <script>
+
+        const obj = { // Ref(레퍼런스변수, 주소값/참조값)
+            // 객체는 속성과 메소드로 이루어져있다. (객체지향 언어는 동일함/ 소괄호 유무로 속성 메소드 구별함)
+            // 함수를 넣으면 메소드, 값을 넣으면 속성(js기준 죄다 속성)
+            name : '홍길동', // 속성
+            age : 24, // 속성
+            wakeup: function(){ // 메소드
+                //function이 밖에 있으면 함수, 객체 안에 있으면 메소드!
+                console.log(this.name + '이 일어났다.');
+                // this : 상수, mySelf(자신의 주소값)이 포함되어있음
+            }
+        };
+
+        const obj2 = obj; // 얕은 복사, 주소값만이 복사 된 것. 같은 객체를 가리킴.
+        // (객체(주소값)).(속성) : 주소값에 접근하겠다.
+
+        console.log('1' + obj.name);
+        obj2.name = '신사임당';
+        obj.name = '장보고';
+        console.log('2' + obj.name);
+        console.log('3' + obj2.name);
+
+        obj.wakeup();
+        console.log(obj);
+        console.log(typeof obj);
+
+    </script>
+</body>
+</html>

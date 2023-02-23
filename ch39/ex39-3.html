@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-3</title>
+</head>
+<body>
+    <h1>ex39-3.html</h1>
+    <h3>요소 취득</h3>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana">바나나</li>
+        <li id="orange">오렌지</li>
+    </ul>
+    <script>
+
+        // const appleElem = document.getElementById('apple'); // 못 찾으면 null 표시(중요)
+        
+        // 트리 구조에서 <html>부터 순차적으로 id값 'apple'을 찾는다.
+
+        const appleElem = document.querySelector('#apple');
+        appleElem.style.color = 'red'; // 객체 안에 객체가 있는 모양
+        // querySelector : 단수
+        // querySelectorAll : 복수
+
+        // 프로그래밍에서 복수(여러개)를 가리키는 것은 배열을 생각하면 된다.(아닌 경우도 있음)
+        // querySelector: ES6 메소드. 유연함 Jquery와 방식이 비슷함
+
+    </script>
+</body>
+</html>

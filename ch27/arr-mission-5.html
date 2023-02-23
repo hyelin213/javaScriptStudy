@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr-mission-5</title>
+</head>
+<body>
+    <h1>arr-mission-5.html</h1>
+    <script>
+
+        /*
+        
+        */
+
+        const stuNames = ['소영', '루아', '민정', '혜린'];
+        const myScores = [0, 0, 0, 0];
+
+        //  국어0, 영어1, 수학2
+        const stuScores = [
+            [100, 90, 80], // 소영0 / 3
+            [100, 100, 100], // 루아1 / 3
+            [50, 60, 30], // 민정2 / 3
+            [90, 70, 20], // 혜린3 / 3
+        ];
+
+        // 각 학생의 합계 점수를 출력해 주세요.
+        // 소영 : 270 / 0-1 0-2 0-3
+        // 루아 : 300
+        // 민정 : 140
+
+        for(let i=0; i<stuScores.length; i++){ //3
+            let sum = 0; // 초기화 되지 않도록 for문 안에 작성(증감식이 적용되어야 함)
+            for(let z=0; z<stuScores[i].length; z++){ // 각 3
+                // 바깥 for문으로 다시 나갈 때는 안의 for문은 새롭게 세팅됨
+                sum += stuScores[i][z]
+            }
+            console.log(stuNames[i] + sum);
+        }
+
+        // for(let j=stuScores.length-1; j>=0; j--){
+            
+        // }
+
+        console.log('=============================================Tzone');
+
+        // const stuNames = ['소영', '루아', '민정'];
+        // const myScores = [0, 0, 0]; => 합계 적용하기
+        const cls = ['국어', '영어', '수학'];
+        const clsScores = [0, 0, 0];
+
+        for(let i=0; i<stuScores.length; i++){
+            for(let z=0; z<stuScores[i].length; z++){
+                myScores[i] += stuScores[i][z];
+                clsScores[z] += stuScores[i][z];
+            }
+        } // 세팅
+
+        for(let i=0; i<stuNames.length; i++){
+            const avg = myScores[i] / stuScores[i].length;
+            console.log(`${stuNames[i]} : ${myScores[i]}점, 평균 ${parseInt(avg)}점`);
+            console.log(`${cls[i]} : ${clsScores[i]}점, 평균 ${parseInt(avg)}점`);
+        } // 출력
+
+        /*
+            국어 : 총점, 평균점수
+            영어 : 총점, 평균점수
+            수학 : 총점, 평균점수
+        */
+
+        
+
+
+    </script>
+</body>
+</html>

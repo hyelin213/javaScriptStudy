@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destruc</title>
+</head>
+<body>
+    <h1>destruc.html</h1>
+    <script>
+
+        // 구조 분해 할당
+        // : 자바스크립트의 특징적 기능. 객체일 때만 사용 가능하다.
+
+        const obj = {
+            'name': '홍길동',
+            'age': 22,
+            'loca': '서울'
+        };
+        console.dir(obj)
+        
+        function printHuman(obj){
+            const name = obj.name;
+            const age = obj.age;
+            console.log(`제 이름은 ${name}이고, 나이는 ${age}살 입니다.`);
+        }
+
+        printHuman(obj);
+
+        // 구 분 할
+        function printHuman2({name, age}){ // 넘어오는 것은 무조건 객체
+            console.log(`제 이름은 ${name}이고, 나이는 ${age}살 입니다.`);
+        }
+
+        printHuman2(obj);
+        
+        let { name:nickname, age, loca } = obj;
+
+        /* 기존의 쓰던 방식
+        let name, age, loca;
+
+        name = obj.name;
+        age = obj.age;
+        loca = obj.loca;
+        */
+
+        console.log(nickname); // 이름지어 주는 거는 퇴색된 너낌...
+        console.log(age);
+        console.log(loca);
+
+    </script>
+</body>
+</html>

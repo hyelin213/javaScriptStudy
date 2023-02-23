@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr-mission-2</title>
+</head>
+<body>
+    <h1>arr-mission-2.html</h1>
+    <script>
+
+        /*
+            arr 배열을 사용하여 toString()
+            메소드와 같게 콘솔에 찍힐 수 있도록
+            작업을 한다.
+
+            for문, if문 적절하게 사용
+        */
+
+        const arr = [100, 200, 300, 400, 500];
+        // console.log(arr.toString());
+
+        let str = '';
+
+        for(var i = 0; i<arr.length; i++){
+            str += arr[i];
+            if(i+1 !== arr.length){
+                str += ',';
+            }
+        }
+        console.log(str);
+
+        
+        let str2 = '';
+        for(var i = 0; i<arr.length; i++){
+            str2 += arr[i];
+            if(str2<arr){ // 타입이 다른 거는 속도 느려짐(비추천)
+                str2 += ',';
+            }
+        }
+        console.log(str2);
+
+
+        console.log('=================================Tzone');
+
+
+        console.log(arr[4]);
+        console.log(arr[arr.length - 1]); // 중요
+
+        let str3 = '';
+
+        for(var i = 0; i<arr.length; i++){
+            str3 += arr[i];
+            if(i < arr.length - 1){
+                str3 += ',';
+            }
+        }
+        console.log(str3);
+
+        let str4 = '';
+
+        for(var i = 0; i<arr.length; i++){
+            if(i !== 0){
+                str4 += ',';
+            }
+            str4 += arr[i];
+        }
+        console.log(str4);
+        
+    </script>
+</body>
+</html>

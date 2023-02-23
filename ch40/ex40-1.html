@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-1</title>
+    <style>
+
+        input:first-child{ margin: 20px; }
+
+    </style>
+</head>
+<body>
+    <h1>ex40-1.html</h1>
+    <button>Click me!</button>
+    <button>Hi!</button>
+    <input type="text" name="" id="">
+
+    <form action="목적지" method="post">
+        <!-- get: 보이는 것 / post: 가리는 것 -->
+        <div>
+            <input type="text" name="name" placeholder="이름">
+        </div>
+        <div>
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+            <!-- 초기화는 사용 안 함 -->
+        </div>
+    </form>
+
+    <script>
+
+        // 이벤트: ~했을 때
+
+        const btnElem = document.querySelector('button');
+
+        btnElem.onclick = function(){ // Element라면 이벤트는 다 걸 수 있다.
+            console.log('클릭됨');
+        }
+
+        /*
+            이벤트가 전파되며 내려가는 것을 '캡쳐링', 목적이 되는 것을 '타겟',
+            다시 되올라가는 것을 '버블링'이라고 한다.
+        */
+
+    </script>
+</body>
+</html>

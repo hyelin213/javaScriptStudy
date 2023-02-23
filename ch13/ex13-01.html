@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13-01</title>
+</head>
+<body>
+    <h1>ex13-01.html</h1>
+    <h4>스코프의 개념</h4>
+    <script>
+
+        function add(x, y){
+            var d = 10;
+            console.log(x, y, '입니다.');
+            return x + y;
+        }
+        // function 내에 있을 때 x, y, d는 의미가 있지만 바깥에서는 의미가 없다.
+        // 지역 변수와 전역 변수의 차이
+
+        add(2, 5);
+        console.log(x, y); // error
+
+    </script>
+</body>
+</html>

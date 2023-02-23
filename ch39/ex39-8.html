@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-8</title>
+</head>
+<body>
+    <h1>ex39-8.html</h1>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana">바나나</li>
+        <li id="orange">오렌지</li>
+    </ul>
+    <script>
+
+        const elems = document.getElementsByTagName('li');
+        // 복수 계열/null은 넘어오지 않음.(빈 배열)
+        console.log(elems); // 유사 배열(가짜)
+
+        for(let i=0; i<elems.length; i++){
+            const item = elems[i];
+            item.style.color = 'red';
+        }
+        // forEach가 안 되므로(유사 배열이라서) for문을 작성한다.
+        // 0칸에는 가장 먼저 찾은 템이 들어간다.
+
+        // elems.forEach(item => console.log(item)); // error
+
+    </script>
+</body>
+</html>

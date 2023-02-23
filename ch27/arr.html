@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr</title>
+</head>
+<body>
+    <h1>arr.html</h1>
+    <h2>p492</h2>
+    <script>
+
+        /*
+            배열을 쓰는 이유
+            : 여러개의 값을 한 곳에 담고 싶을 때(서랍장 느낌)
+
+            모든 언어 통일임
+
+            보통 숫자와 문자열을 넣는다.           
+            변수가 주택이었다면 배열은 아파트!
+
+        */
+
+        const arr = [10, 20, 30]; //타입이 같은 것만 넣을 것(숫자, 문자열)
+        //const arr = [10(1번 방), 20(2번 방), 30(3번 방)];
+        console.log(arr[0]);
+        // arr = []; => error / 상수값이기 때문
+
+        arr[0] = 100;
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        console.log(arr[3]); // 4번째는 아무것도 없기 때문에 undefined.
+
+        arr[3] = 500;
+        console.log(arr[3]); // 방을 늘려줌
+
+        // 총 4칸을 갖고 있다.
+
+        arr.push(200); // 가장 마지막 칸에 방을 만들어서 값을 넣어줌
+        arr.push(300); // 직접 숫자로 넣는 것보다 안전한 방법
+
+        console.log(arr.length); // 방의 갯수를 알고 싶을 때 사용하는 것
+        console.log(arr[5]);
+
+    </script>
+</body>
+</html>

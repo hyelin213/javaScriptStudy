@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forVsForEach</title>
+</head>
+<body>
+    <h1>forVsForEach.html</h1>
+    <script>
+
+        /*
+            for, forEach는 둘 다 동기
+
+            async await: promise와 연관되어있으며 조금 더 편하게 사용하도록 도와주는 기능
+            -> forEach는 적용되지 않는다.(안 기다려줌)
+        */
+       
+        const arr = [ 1, 2, 3, 4 ];
+        console.log('for 시작');
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+        console.log('for 끝');
+
+        console.log('========================');
+
+        console.log('for 시작');
+        arr.forEach(item => console.log(item));
+        console.log('for 끝');
+
+    </script>
+</body>
+</html>

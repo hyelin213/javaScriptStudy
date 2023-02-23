@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06-02-string</title>
+</head>
+<body>
+    <h1>ex06-02-string.html</h1>
+    <script>
+        var str;
+
+        str = '문자열';
+        console.log(str);
+
+        str = "문자열";
+        console.log(str);
+
+        str = `문자열`; //백틱 (ES6 문법, 개행도 가능(템플릿리터럴(기능을 이용할 때 부르는 명칭)))
+        console.log(str);
+
+        var name = '홍길동';
+        var height = 173.5;
+        var age = 22;
+
+        console.log('제 이름은 ' + name + "입니다.");
+        console.log('제 이름은 %s입니다.', name);
+        console.log('제 이름은 %s입니다. 제 키는 %fcm입니다. 제 나이는 %d세입니다.'
+        , name, height, age);
+        // %f : 실수, %d : 정수
+
+
+        console.log(`제 이름은 ${name}입니다.`); //백틱(표현식 삽입이 가능하다) p64
+
+        const result = `제 이름은 ${name}입니다. ${1 + 1 + 2}`;
+        console.log(result);
+
+        //----------------------------------------------------
+
+        let result2 = result; 
+        console.log(result2);
+        result2 += 'dddd';
+
+        console.log('1: ' + result);
+        console.log('2: ' + result2);
+
+        const msg1 = '안\'녕\n반가워'; //이스케이프문자, \t : 사이 간격 주는 거 (console에만 적용됨)
+        console.log(msg1);
+        document.write(msg1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for2</title>
+</head>
+<body>
+    <h1>for2.html</h1>
+    <script>
+
+        for(var i=0 ; i<10 ; i++){ // 시간
+            //내부의 for문을 반복한다. 
+            for(var z=0 ; z<5 ; z++){ // 분
+                for(var k=0 ; k<3 ; k++){ // 초
+                    console.log(`${i} - ${z} - ${k}`);
+                }
+            }
+        }
+
+        // 시간 - 분 - 초 - 나노세컨즈 ...
+        // 3개까지 쓰는 경우는 드물다.
+
+    </script>
+</body>
+</html>

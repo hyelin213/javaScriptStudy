@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn-mission-1</title>
+</head>
+<body>
+    <h1>fn-mission-1.html</h1>
+    <script>
+
+        function minus(n1, n2){
+            //const result = n1 - n2;
+            //return result;
+            return n1 - n2;
+        }
+
+        //void 함수였다면 minus(n1 - n2);만 덜렁 씀
+
+        const r1 = minus(20, 10);
+        console.log(r1); //10
+
+        const r2 = minus(35, 20);
+        console.log(r2); //15
+
+        /*
+            function minus(n1, n2){
+              const result = n1 - n2;
+              return result
+            } 호이스팅 현상으로 아래에 작성해도 적용됨(c언어는 예외)
+        */
+
+    </script>
+</body>
+</html>

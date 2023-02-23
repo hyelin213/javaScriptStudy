@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-51</title>
+</head>
+<body>
+    <h1>ex39-51.html</h1>
+
+    <ul id="fruits">
+        <li>Apple</li>
+    </ul>
+    
+    <script>
+
+        const fruitsElem = document.getElementById('fruits');
+        
+        // 요소 노드 생성
+
+        const liElem = document.createElement('li'); // 태그 만드는 요소
+
+        /*
+        const textNode = document.createTextNode('Banana');
+        const textNode2 = document.createTextNode('바나나');
+
+        liElem.append(textNode); // 기존 자식의 뒤에 붙이는 것(beforeend 위치)
+        liElem.append(textNode2);
+        */
+
+        liElem.innerHTML = '<b>Banana</b>';
+        fruitsElem.prepend(liElem); // 기존 자식의 앞에 붙이는 것(afterbegin 위치)
+
+        // createElement : element의 주소값을 알고 있을 때 사용하는 것(이벤트 걸기 좋음)
+        // innerHTML : 주소값이 필요없을 때 사용하는 것
+        
+    </script>
+</body>
+</html>

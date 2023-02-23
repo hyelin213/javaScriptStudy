@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex42-3</title>
+</head>
+<body>
+    <h1>ex42-3.html</h1>
+    <h4>p811 비동기</h4>
+    <script>
+        /*
+        setTimeout(function(){
+            console.log('안녕~');
+        }, 3000); // 인자(아규먼트) 2개임
+        */
+
+        function foo(){
+            console.log('foo');
+        }
+
+        function bar(){
+            console.log('bar');
+        }
+
+        setTimeout(foo, 3000); // setTimeout은 비동기로 동작, 오래걸리는만큼 이벤트 루프로 보냄
+        // bar();
+        // 싱글 스레드
+
+        // 콜백 안에 콜백, 순서를 잡아줄 콜백...
+
+        // 자바스크립트의 메소드는 대부분 비동기
+
+    </script>
+</body>
+</html>

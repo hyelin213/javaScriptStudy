@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <h1>switch.html</h1>
+    <script>
+
+        /*
+            switch(값){
+                
+                { = case:
+                } = break;
+
+                case 값1:
+                    원하는 내용
+                    break;
+                case 값2:
+                    원하는 내용
+                    원하는 내용
+                    원하는 내용
+                    break;
+                default:
+                    break;
+            }
+
+            switch : 정확한 값 (문자값)
+            if : 범위를 지정할 수 있음
+
+            break가 없으면 break를 찾을 때 까지 아래의 값을 입력한다.
+            default는 if문의 else와 유사하며, 가장 위에 써도 상관없다.
+        */
+
+        const val = 5;
+        switch(val){
+            case 1:
+                console.log('1입니다.');
+                break;
+            case 2:
+                console.log('2입니다.');
+                break;
+            case 5:
+                console.log('5입니다.');
+                break;
+            default:
+                console.log('숫자 없음.');
+                break;
+        }
+
+    </script>
+</body>
+</html>

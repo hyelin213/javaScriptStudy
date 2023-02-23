@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn8</title>
+</head>
+<body>
+    <h1>fn8.html</h1>
+    <script>
+
+        // getRandomMinMax 함수를 이용하여 새로고침할 때마다
+        // 2~9단을 랜덤하게 찍는 프로그램을 완성해 주세요.
+
+        const cnt = getRandomMinMax(2, 9);
+        gugudan(cnt);
+
+        console.log('=======================');
+
+        gugudan(getRandomMinMax(2, 9)); // 안쪽부터 먼저 실행
+
+        function getRandomMinMax(min, max){
+            return parseInt(Math.random() * (max - min + 1) + min);
+        }
+
+        function gugudan(cnt){
+            for(let i=1; i<10; i++){
+                console.log(`${cnt} x ${i} = ${cnt * i}`);
+            }
+        }
+
+        console.log('=======================');
+
+        gugudanMulti(6, 9);
+
+        function gugudanMulti(min, max){
+            for(let z=min; z<=max; z++){
+                /*
+                for(let z=1; z<10; z++){
+                    console.log(`${i} x ${z} = ${i * z}`);
+                }
+                */
+                console.log(`${z}단`);
+                gugudan(z);
+            }
+        }
+        
+    </script>
+</body>
+</html>

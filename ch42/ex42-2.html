@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex42-2</title>
+</head>
+<body>
+    <h1>ex42-2.html</h1>
+    <h4>p810 동기</h4>
+    <script>
+
+        function sleep(fn, delay){ // 콜백 함수를 표현할 때는 fn 혹은 cb, delay는 정수가 들어옴
+            const delayUntil = Date.now() + delay;
+            /*
+                Date.now : 자바스크립트가 가진 Date에 now 속성을 부여
+            */
+
+            while(Date.now() < delayUntil);
+            // 다음 것을 실행하기 전 시간 떼우기용...
+
+            fn();
+        }
+
+        function foo(){
+            console.log('foo');
+        }
+
+        function bar(){
+            console.log('bar');
+        }
+
+        sleep(foo, 3000); // 3초 후에 출력 됨
+        // sleep은 동기
+        bar();
+
+        // 동기는 순서대로 진행하는듯 (sleep 출력될 때까지 bar출력 안 됨)
+
+    </script>
+</body>
+</html>

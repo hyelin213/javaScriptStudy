@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission3</title>
+</head>
+<body>
+    <h1>mission3.html</h1>
+    <ul id="fruits">
+        <li>strawberry</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Blueberry</li>
+    </ul>
+    <script>
+
+        const fruitsElem = document.querySelector('#fruits');
+        const liElem = document.createElement('li');
+        liElem.appendChild(document.createTextNode('Orange'));
+
+        // fruitsElem.insertBefore(liElem, fruitsElem.firstElementChild.nextElementSibling);
+        // fruitsElem.children[1]; -> 목록 두 번째 위치 고정(위와 동일)
+
+        // 아래에서 3번째 위치 고정
+        // fruitsElem.insertBefore(liElem, fruitsElem.lastElementChild.previousElementSibling);
+        fruitsElem.insertBefore(liElem, fruitsElem.children[fruitsElem.children.length-2]);
+
+    </script>
+</body>
+</html>

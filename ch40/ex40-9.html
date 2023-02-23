@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-9</title>
+</head>
+<body>
+    <h1>ex40-9.html</h1>
+    <button>Click Me!</button>
+    <script>
+
+        // addEventListener: 이벤트 거는 메소드
+
+        const btnElem = document.querySelector('button');
+        btnElem.addEventListener('click', function(e){
+            alert('버튼클릭햇당');
+        })
+        
+        // }, true); => useCapture을 사용하고 싶다면 true를 주면 된다.
+
+        /*
+            EventTarget(목적).addEventListener => 계속 추가할 수 있다.
+            ('eventType(어떤 이벤트인지)', function)[, useCapture(옵션)]);
+
+            캡쳐링과 버블링을 둘 다 쓸 것이라면 두 번쓰면 된다.
+        */
+
+    </script>
+</body>
+</html>

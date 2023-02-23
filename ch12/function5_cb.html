@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function5_cb</title>
+</head>
+<body>
+    <h1>function5_cb.html</h1>
+    <script>
+
+        // callback 함수
+
+        function calc(fn, n1, n2){ // 인자 3개
+            return fn(n1, n2); // fn = sum 혹은 multi의 의미가 됨
+        }
+
+        function sum(n1, n2){
+            return n1 + n2;
+        }
+
+        const multi = function(n1, n2){
+            return n1 * n2;
+        }
+        // multi에 function의 주소값이 부여되어있음
+
+        console.log(calc(sum, 10, 20)); // 30
+        // sum : 함수 sum의 주소값(참조값)이 부여되어있음
+
+        console.log(calc(multi, 10, 20)); // 200
+
+        console.log(
+            calc(
+                function(n1, n2){ // 익명 함수(더 많이 씀)
+                    return n1 * n2;
+                }, 10, 20
+            )
+        );
+            
+    </script>
+</body>
+</html>

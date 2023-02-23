@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex17-2</title>
+</head>
+<body>
+    <h1>ex17-2.html</h1>
+    <script>
+
+        const strObj = new String('Lee'); // 레퍼런스형(Reference Type)
+        const str = 'Lee'; // 원시형(Primitive Type)
+
+        console.log(typeof strObj);
+        console.log(typeof str);
+
+        const regExp = new RegExp(/ab+c/i);
+        // 정규식: 반드시 포함되어야 하는 문자 정도를 체크하는 용도
+        // 대표적인 것: email '^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$'
+
+        const date = new Date(); // 자주 쓰임
+        console.log(date);
+
+    </script>
+</body>
+</html>

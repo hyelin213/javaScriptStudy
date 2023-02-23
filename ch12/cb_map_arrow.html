@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb_map_arrow</title>
+</head>
+<body>
+    <h1>cb_map_arrow.html</h1>
+    <script>
+
+        const arr = [1, 5, 10, 22, 30, 41, 8];
+        const arr2 = arr.map((item, idx) => item * 2);
+
+        const arr3 = arr.map((item, idx) => { return item * 3; });
+
+        console.log('default: ' + arr.toString());
+        console.log(arr2.toString());
+        console.log(arr3.toString());
+
+    </script>
+</body>
+</html>

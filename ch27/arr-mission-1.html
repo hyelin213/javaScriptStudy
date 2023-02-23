@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr-mission-1</title>
+</head>
+<body>
+    <h1>arr-mission-1.html</h1>
+    <script>
+
+        /*
+            배열 arr과 for문을 활용하여 배열에 있는 모든 값을 더한
+            결과 값을 출력하시오.
+        */
+
+        const arr = [10, 20, 30, 40, 100, 120, 140];
+        let num = 0;
+
+        for(var i = 0; i<arr.length; i++){
+            num += arr[i];
+        }
+        console.log(num);
+
+        console.log('========Tzone');
+
+        let sum = 0;
+        for(let z=0; z<arr.length; z++){
+            sum += arr[z];
+        }
+        console.log(`합계 : ${sum}`);
+        
+    </script>
+</body>
+</html>

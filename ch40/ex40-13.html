@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-13</title>
+    <style>
+        button{
+            border: 1px solid #ccc; background-color: white;
+            padding: 5px 10px; font-weight: 100;
+            transition: .3s;
+        }
+        button:hover{
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ex40-13.html</h1>
+    <button>Click Me!</button>
+    <button class="cancel">취소</button>
+    <script>
+
+        // addEventListener: 이벤트 거는 메소드
+
+        const btnElem = document.querySelector('button');
+        const btn2Elem = document.querySelector('.cancel');
+        function clkEvent(e) {
+            alert('버튼클릭햇당');
+        }
+        btnElem.addEventListener('click', clkEvent);
+
+        btn2Elem.addEventListener('click', function(){
+            btnElem.removeEventListener('click', clkEvent);
+        });
+        
+    </script>
+</body>
+</html>

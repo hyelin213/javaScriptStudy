@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr-mission-3</title>
+</head>
+<body>
+    <h1>arr-mission-3.html</h1>
+    <script>
+
+        /*
+            배열 search
+            arr 배열에서 왼쪽에서 가장 빨리 만나는
+            SEARCH_VAL값이 몇 번방에 있는지 알아내세요.
+            for문 끝나고 콘솔에 출력해 주세요.
+            없는 값은 -1
+        */
+
+        const arr = [100, 200, 300, 400, 500, 300, 400]; //0~6
+        const SEARCH_VAL = 300;
+        let sum = '';
+
+        for(var i = 0; i < arr.length; i++){
+                if(arr[i] === SEARCH_VAL){
+                    sum = i;
+                    break;
+                } else {
+                    sum = '-1';
+                }
+        }
+        console.log(sum);
+
+
+        console.log('================================Tzone');
+
+
+        let result = -1;
+
+        for(let j=0; j<arr.length; j++){ // 안쪽에 있는 값을 구할 때는 이렇게 쓰면 됨
+            if(arr[i] === SEARCH_VAL){
+                result = i;
+                break;
+            }
+        }
+        console.log(result);
+
+        console.log(arr.indexOf(SEARCH_VAL));
+        // 상단의 값은 indexOf()에 내장되어있는 값과 거의 비슷하다.
+
+        console.log(arr.lastIndexOf(SEARCH_VAL));
+        // lastIndexOf()는 오른쪽부터 search한다.
+
+
+    </script>
+</body>
+</html>

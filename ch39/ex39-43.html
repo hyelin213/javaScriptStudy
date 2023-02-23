@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-43</title>
+</head>
+<body>
+    <h1>ex39-43.html</h1>
+    <div id="container"></div>
+    <script>
+
+        // 동적 표현
+
+        const containerElem = document.querySelector('#container');
+        /*    
+        containerElem.innerHTML = `<ul id="fruits">`;
+        containerElem.innerHTML += `<li class="apple">사과</li>`;
+        containerElem.innerHTML += `<li class="banana">바나나</li>`;
+        containerElem.innerHTML += `</ul>`;
+
+        // innerHTML에 넣을 때마다 문서에 '새로' 렌더링
+
+        */
+
+        /*
+        containerElem.innerHTML = `<ul id="fruits">
+            <li class="apple">사과</li>
+            <li class="banana">바나나</li>
+        </ul>`;
+        */
+
+        let ctnt = `<ul id="fruits">`;
+        ctnt += `<li class="apple">사과</li>`;
+        ctnt += `<li class="banana">바나나</li>`;
+        ctnt += `</ul>`;
+        containerElem.innerHTML = ctnt;
+
+        // 최소한 줄일 수 있는 만큼 줄이기
+        
+    </script>
+</body>
+</html>

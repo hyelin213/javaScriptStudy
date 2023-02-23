@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-26</title>
+</head>
+<body>
+    <h1>ex40-26.html</h1>
+    <input type="text">
+    <em class="msg"></em>
+    <script>
+
+        const inputElem = document.querySelector('input');
+        const msgElem = document.querySelector('em');
+
+        inputElem.addEventListener('keyup', e => { // keyup: 키보드를 떼는 순간의 이벤트
+            if(e.key !== 'Enter'){ return; } // return만 있을 때는 그냥 종료
+            //if(e.keyCode !== 13){ return; }(same)
+
+            msgElem.textContent = e.target.value; // textContent: 문자열을 넣는 것
+            e.target.value = '';
+        });
+
+    </script>
+</body>
+</html>

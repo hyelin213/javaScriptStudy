@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb-mission-3</title>
+</head>
+<body>
+    <h1>cb-mission-3.html</h1>
+    <script>
+
+        // arr배열에 10이상 40미만인 값들만 뽑아낸
+        // 새로운 배열을 만들어 주세요.
+
+        const arr = [1, 5, 10, 22, 30, 41, 8, 9];
+
+        const arrCopy = arr.filter(function(item){
+            if(item >= 10 && item < 40){
+                return true;
+            }
+            // return false; // undefined 나오는 건 같아서 굳이 안 넣어도 됨
+        });
+
+        console.log(arrCopy.toString());
+
+    </script>
+</body>
+</html>

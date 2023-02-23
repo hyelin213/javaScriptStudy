@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-85</title>
+    <style>
+        /* div{ background-color: aliceblue;} */
+    </style>
+</head>
+<body>
+    <h1>ex39-85.html</h1>
+    <h3>p745</h3>
+    <div style="color: red">Hello World!</div>
+    <!-- style="color: red" => 자바스크립트는 객체로 변환하여 가져온다 -->
+    <script>
+
+        const divElem = document.querySelector('div');
+        divElem.style.color = 'blue';
+
+        divElem.style.backgroundColor = 'yellow';
+        // divElem.style['backgroundColor'] = 'yellow';
+        // divElem.style['background-color'] = 'yellow'; // 다 됨
+
+        divElem.style.width = '100px';
+        divElem.style.height = '200px';
+        // 요즘은 잘 안 씀... 조금씩 고칠 때는 ㄱㅊ 4개 이상은.. 별루
+
+    </script>
+</body>
+</html>

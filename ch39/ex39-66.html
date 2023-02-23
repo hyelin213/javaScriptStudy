@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-66</title>
+</head>
+<body>
+    <h1>ex39-66.html</h1>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+    <script>
+
+        // node 이동
+
+        const fruitsElem = document.querySelector('#fruits');
+        console.log(fruitsElem.children);
+        const [appleElem, bananaElem, aaa] = fruitsElem.children;
+        // appleElem <- fruitsElem.children의 0번방 주소값 (<li>Apple</li>)
+        // bananaElem <- fruitsElem.children의 1번방 주소값 (<li>Banana</li>)
+        // aaa <- fruitsElem.children의 2번방 주소값 (<li>Orange</li>)
+        // 순서와 갯수가 중요하다.
+
+        fruitsElem.append(appleElem);
+        fruitsElem.prepend(aaa);
+
+    </script>
+</body>
+</html>

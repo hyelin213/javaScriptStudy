@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13-03</title>
+</head>
+<body>
+    <h1>ex13-03.html</h1>
+    <script>
+
+        var x = 'global';
+        // 선언은 한 번만 할 것
+        function foo(){
+            var x = 'local';
+            console.log('foo: ' + x);
+        }
+
+        foo(); // 호출하면 메모리에 올라감(호출되는 순간 해당 함수는 소멸된 것과 동일)
+               // 현실로 비유하면 건물 설계도를 보고 건물을 지은 것
+
+        console.log('전역 : ' + x);
+
+        // 전역과 지역 변수의 식별자가 동일할 경우, 가장 가까운 것부터 출력한다.
+
+    </script>
+</body>
+</html>

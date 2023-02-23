@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb[보충설명]</title>
+</head>
+<body>
+    <h1>cb.html</h1>
+    <script>
+
+        function master(cb){ // add를 cb에 호출
+            cb(3);
+        }
+
+        function add(val){
+            console.log('add: ' + (val + val));
+        }
+
+        // callback 순서@@ -> 함수형 프로그래밍을 하기위해 사용 됨
+        // add -> cb -> add
+        // cb(1) -> add(val)
+
+        const fff = add;
+
+        function multi(val){
+            console.log('multi :' + (val * val));
+        }
+
+        master(add); // 3 + 3
+        add(2); // 직접 호출 2 + 2
+        fff(2);
+
+        master(multi); // 3 * 3
+        multi(2); // 2 * 2
+
+    </script>
+</body>
+</html>

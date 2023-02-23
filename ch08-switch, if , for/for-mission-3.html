@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for-mission-3</title>
+</head>
+<body>
+    <h1>for-mission-3.html</h1>
+    <script>
+
+        // const val = parseInt(prompt());
+
+        /*
+        for(var i = 1 ; i < 10 ; i++){
+            switch(val){
+                case 2: case 3: case 4: case 5:
+                case 6: case 7: case 8: case 9:
+                    console.log(`${val} x ${i} = ${val * i}`)
+                    break;
+                default :
+                    console.log('구구단을 출력할 수 없습니다.')
+                    break;
+            }
+        }
+        */
+
+        /*
+        if((val <= 9) && (val >= 2)){
+            for(var n = 1 ; n < 10 ; n++){
+                console.log(`${val} x ${n} = ${val * n}`);
+            }
+        } else if(isNaN){
+            console.log('구구단을 출력할 수 없습니다.');
+        }
+        */
+
+        console.log('==========Tzone')
+
+        const MIN_DAN = 2;
+        const MAX_DAN = 9;
+        const val = prompt();
+        const dan = parseInt(val);
+
+        if(isNaN(dan) || dan < MIN_DAN || dan > MAX_DAN){ //마케팅적으로 순서를 바꿀 수 있다(첫번째가 빠름)
+            console.log('구구단을 출력할 수 없습니다.');
+        } else {
+            for(var i = 1 ; i < 10 ; i++){
+                console.log(`${dan} X ${i} = ${dan * i}`);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

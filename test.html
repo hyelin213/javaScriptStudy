@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <!-- p4 -->
+    <!--
+        script를 body에 작성하는 이유
+        : 자바스크립트는 굳이 앞쪽에서 읽을 필요가 없다.
+          문서를 우선적으로 띄우고 그 다음 script를 띄운다.
+    -->
+    <script>
+        //single line comment
+        /*
+            multi line comment
+        */
+       
+        var number = 'Hello World!';
+        /*
+        var number;
+        number = 'Hello World!'; 이렇게 하면 저장되는 위치가 달라짐
+        한 이름은 한 번만 선언하면 된다.
+        */
+
+        console.log(number);
+        number = '안녕하세요';
+        console.log(number);
+
+        console.log(number*number); //결과값 : NaN(숫자가 아니라는 뜻)
+
+        number = 55; //오십오
+        console.log(number*number);
+
+        // 이렇게 계속 변수를 바꾸는 건 나중에 큰 프로그램 만들 때 위험함
+        
+        number = 55;
+        console.log(number*123);
+        //리터럴 (값 그 자체인 값)
+
+        var number2 = '55'; //문자열임/오오
+        console.log(number2*number2);
+        //자바스크립트는 숫자형으로 바꾸어 <자동형변환>함(좋은거아님)
+        //직접 바꾸는 것은 직접형변환
+        
+        /*
+            const(예약어/상수를 저장하는 명령어(콘크리트마냥)) number(상수명) = 'string(문자열)';
+            console.log(number(인자));
+        */
+
+        const abc = 'def'; //리터럴 값(상수라고 하기는 함... 하지만 엄연히 다른 것)
+        console.log(abc); //상수는 한 번 입력된 것이 안 바뀌는 것
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11-14-2</title>
+</head>
+
+<body>
+    <h1>ex11-14-2.html</h1>
+    <script>
+
+        const obj = {
+            a: 10, // deep copy
+            b: {// shallow copy(주소값(참조값)이 복사됨/ obj2 => b: obj.b,)
+                b_c: 20
+            } // 중괄호가 닫히면 새로운 주소값이 생김
+        };
+
+        const obj2 = { ...obj }; 
+        // same
+        const _obj = {
+            a: 10,
+            b: obj.b,
+            // 완전히 복사된 것이 아닌, {}이루어진 객체 안의 객체이기 때문에
+            // shallow copy가 되어 별개가 아니라 같은 존재의 의미가 된다.(deep copy는 별개로 복사되는 것)
+        }
+        console.log(obj === obj2); // false
+        console.log(obj.b === obj2.b); // true
+        console.log(_obj);
+
+    </script>
+</body>
+
+</html>

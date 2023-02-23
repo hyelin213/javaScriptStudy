@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getFileNameExt</title>
+</head>
+<body>
+    <h1>getFileNameExt.html</h1>
+    <script>
+
+        // 확장자명 구하기
+
+        const fileNm = 'bom2.unni.jpg';
+
+        const pureFileNm = getFileNm(fileNm); // 외부의 값, 마지막 .의 앞에 문자를 return(bom2.unni)
+        const fileExt = getFileExt(fileNm); // 외부의 값, 마지막 .의 뒷쪽 문자를 return(jpg)
+
+
+        function getFileNm(fnm){
+            // const lastDotIdx = fnm.lastIndexOf('.');
+            // const result = fnm.substring(0, lastDotIdx);
+            // return result;
+
+            return fnm.substring(0, fnm.lastIndexOf('.'));
+        }
+
+        function getFileExt(fnm){
+            const lastDotIdx = fnm.lastIndexOf('.');
+            const result = fnm.substring(lastDotIdx+1);
+            return result;
+        }
+
+        console.log(pureFileNm);
+        console.log(fileExt);
+
+
+    </script>
+</body>
+</html>

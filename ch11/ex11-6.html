@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11-6</title>
+</head>
+<body>
+    <h1>ex11-6.html</h1>
+    <script>
+
+        var score = 80;
+        var copy = score; // 처음의 값을 복사(밑에서 바꿔도 처음 값이 유지된다.)
+        // 둘은 별개의 공간(존재)
+        // deep copy
+
+        console.log(score);
+        console.log(copy);
+
+        score = 100;
+        copy = 90;
+
+        console.log(score);
+        console.log(copy);
+
+    </script>
+</body>
+</html>

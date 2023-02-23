@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>mission3</title>
+    <style>
+        .pointer { cursor: pointer; }
+        .ccc { color: #aaa; }
+        .gradation { color: rgb(255, 102, 0); }
+    </style>
+</head>
+<body>
+    <h1>ToDo-List 아이템 삭제</h1>
+    <i class="fa-solid fa-fire gradation"></i>
+    <input type="text" placeholder="할 일">
+    <button>등록</button>
+    <button id="all_clear">전체 삭제</button>
+    <ul id="list"></ul>
+    <script>
+
+        const inputElem = document.querySelector('input');
+        const btnElem = document.querySelector('button');
+        const ulElem = document.querySelector('ul');
+        const allClearBtnElem = document.querySelector('#all_clear');
+
+        function addTodoItem(){
+            const val = inputElem.value;
+            if(val === ''){ return; } // value에 빈 칸이 들어가면 적용되지 않도록 한다.
+            const li = document.createElement('li');
+            li.textContent = val + ' ';
+            li.style.listStyle = 'none';
+
+            // icon 추가
+            const xIcon = document.createElement('i');
+            xIcon.className = 'fa-solid fa-xmark pointer ccc';
+            
+            ulElem.append(li);
+            li.append(xIcon);
+            inputElem.value = null;
+
+            // icon 효과
+            xIcon.addEventListener('click', e => {
+                // ulElem.removeChild(li);
+                // li.remove(); (same)
+                // 클로저 현상(closure)
+                e.target.parentNode.remove(); // 클로저 현상이 없는 것(메모리용량상 성능이 좋음)
+            });
+
+            // checkbox 추가
+            const check = document.createElement('input');
+            
+            check.setAttribute('type', 'checkbox');
+            li.prepend(check);
+
+            // checkbox 효과
+            check.addEventListener('click', e => {
+                if(check.checked){
+                    li.style.color = '#ddd';
+                } else {
+                    li.style.color = '#000';
+                }
+            });   
+        }
+
+        // enter 했을 때
+        inputElem.addEventListener('keyup', e => {
+            if(inputElem.value === ''){
+                alert('할 일을 적어 주세요.')
+            }
+            if(e.key === 'Enter'){
+                addTodoItem();
+            }
+        });
+
+        // button 클릭했을 때
+        btnElem.addEventListener('click', e => {
+            addTodoItem();
+            if(inputElem.value === ''){
+                alert('할 일을 적어 주세요.')
+            }
+        }); 
+
+        // 전체 삭제
+        allClearBtnElem.addEventListener('click', e => {
+            if(ulElem.innerHTML === ''){
+                // if(ulElem.children.length === 0){}
+                // if(ulElem.childElementCount === 0){}(same)
+                alert('삭제할 할 일이 없습니다.');
+            }
+            ulElem.innerHTML = '';
+            // li.remove(); 
+            /*While(ulElem.hasChildNodes()){ // 자식이 있는지 물어보는 것, 있으면 삭제한다는 값
+                ulElem.removeChild(ulElem.firstChild); (same)
+            }*/
+        });
+
+    </script>
+</body>
+</html>

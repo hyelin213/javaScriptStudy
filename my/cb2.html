@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb[보충설명2]</title>
+</head>
+<body>
+    <h1>cb2.html</h1>
+    <script>
+
+        function master(cb){
+            for(let i=0; i<5; i++){
+                cb(i);
+            }
+        } // void
+
+        function fn1(item){
+            console.log('item: ' + item); // 실행을 마치면 호출된 곳으로 돌아간다( => cb(i);)
+        } // void
+
+        fn1(); 
+        // fn1(); -> undefined
+        master(fn1);
+        // master(); -> error
+        
+        // 0~4를 더한 값을 출력하자.=====================================================
+
+        let sum = 0;
+        for(let i=0; i<5; i++){
+            sum += i;
+        }
+        console.log(sum); // for문 방식
+        
+        console.log('============');
+
+        let sum2 = 0;
+        master(function(item){
+            sum2 += item;
+        });
+        console.log(sum2);
+
+        console.log('============');
+
+        function fn2(item){
+            console.log(item);
+        }
+
+        console.log(master(fn2)); // 0 1 2 3 4 undefined
+
+        console.log('============');
+        
+        let sum3 = 0;
+        function fn3(item){
+            sum3 += item;
+        }
+
+        master(fn3);
+        console.log(sum);
+
+    </script>
+</body>
+</html>

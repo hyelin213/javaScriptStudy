@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10-1.html</title>
+</head>
+<body>
+    <h1>ex10-1.html</h1>
+    <h3>p126</h3>
+    <script>
+
+        // 객체지향은 현실 세계를 반영한 느낌임
+
+        var person = {
+            name: 'Lee',
+            sayHello: function(){
+                console.log(`Hello! My name is ${this.name}`);
+            },
+        };
+
+        console.log(typeof person);
+        console.log(person);
+
+        // typescript는 정해진 type은 변경하지 못한다.
+        // 주소값이 들어간 것은 true값으로 활동한다.
+
+        var empty = {};
+        console.log(typeof empty);
+        if(empty){ // boolean 타입만 단일형으로 작성 가능하다.
+            console.log('나는 객체다');
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40-29</title>
+</head>
+<body>
+    <h1>ex40-29.html</h1>
+    <ul id="fruits">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="orange">Orange</li>
+    </ul>
+    <script>
+
+        const fruitsElem = document.getElementById('fruits');
+
+        fruitsElem.addEventListener('click', e => {
+            console.log(`A이벤트 단계 : ${e.eventPhase}`);
+        }, true); // 캡처링 단계의 이벤트 (1)
+
+        const appleElem = document.querySelector('#apple');
+        appleElem.addEventListener('click', e => {
+            console.log(`애플 이벤트 단계 : ${e.eventPhase}`);
+        }); // (2)
+
+        fruitsElem.addEventListener('click', e => {
+            console.log(`B이벤트 단계 : ${e.eventPhase}`);
+        }); // 버블링 단계의 이벤트 (3)
+
+
+        /*
+            중첩된 별개의 이벤트(부모(이벤트)-자식(이벤트))는 버블링으로 인해
+            자식의 이벤트가 실행될 때 부모도 함께 실행 된다.
+        */
+
+    </script>
+</body>
+</html>

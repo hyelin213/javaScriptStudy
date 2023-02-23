@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while-mission-1</title>
+</head>
+<body>
+    <h1>while-mission-1.html</h1>
+    <script>
+
+        // prompt로 값 입력받는다.
+        // 0이면 종료
+        // 짝수값을 입력했을 때만 계속 더한다.
+        // (0 입력되면)짝수 입력된 값만 모두 더한 값을 마지막으로 출력한다.
+
+        /*
+        let num = 0;
+        let sum = 0;
+
+        while(true){
+            num = parseInt(prompt('더할 값을 입력하세요.(종료는 0)'));
+            if(num % 2 === 0){
+                sum += num;
+            }
+            if(num === 0){ break; }
+
+        console.log(sum);
+
+        }
+        */
+
+        console.log('=========Tzone');
+
+        let evenSum = 0;
+
+        while(true){
+            // let evenSum = 0; 안에 있으면 0으로 초기화되어 바깥에 입력해야됨.
+
+            const num = parseInt(prompt('숫자를 입력하세요. (종료: 0)'));
+            if(num === 0){ break; }
+            //if(num % 2 !== 1)
+            //if(!num % 2)
+            if(num % 2 === 0){
+                evenSum += num;
+            }
+        }
+        
+
+        console.log(`짝수 합계 : ${evenSum}`);
+
+
+
+    </script>
+</body>
+</html>

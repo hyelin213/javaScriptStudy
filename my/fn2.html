@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn2</title>
+</head>
+<body>
+    <h1>fn2.html</h1>
+    <script>
+
+        const result = abs(-100);
+        console.log(result); // 무조건 양수값을 출력하라
+
+        function abs(num){
+            // if(num < 0){
+            //     num = -(num); (-1*num)
+            // }
+            // return num;
+
+            return num < 0 ? -(num) : num;
+        }
+
+        // =================================================== ES6 문법으로 변환
+        // arrow function
+
+        const abs2 = num => num < 0 ? -(num) : num;
+        console.log(abs2(-80));
+        console.log(abs2(80));
+
+    </script>
+</body>
+</html>

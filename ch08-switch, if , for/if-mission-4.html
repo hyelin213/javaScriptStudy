@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-mission-4</title>
+</head>
+<body>
+    <h1>if-mission-4.html</h1>
+    <script>
+         // 남자 평균키 171 기준
+         // 여자 평균키 157 기준
+         // 남자였을 때 height값이 171보다 크면 '평균키보다 큽니다.'
+         // 여자였을 때 height값이 157보다 크면 '평균키보다 큽니다.'
+        const gender = 'W'; //남자는 'M';
+        const height = 160;
+
+        let tall = '보다 큽니다.';
+        let short = '보다 작습니다.';
+        let stand = '입니다.';
+
+        if(gender === 'W'){
+            if(height > 165){
+                console.log(`여자의 평균키${tall}`);
+            } else if(height < 165){
+                console.log(`여자의 평균키${short}`);
+            } else if(height === 165){
+                console.log(`여자의 평균키${stand}`);
+            }
+        } else {
+            if(height > 171){
+                console.log(`남자의 평균키${tall}`);
+            } else if(height < 171){
+                console.log(`남자의 평균키${short}`);
+            } else if(height === 171){
+                console.log(`남자의 평균키${stand}`);
+            }
+        }
+
+        console.log('--------------Tzone');
+
+        const WOMAN_STAND_HEIGHT = 157;
+        const MAN_STAND_HEIGHT = 171;
+
+        let standheight = WOMAN_STAND_HEIGHT;
+        let strGender = '여자';
+        // else 값으로 주어야할 것을 변수의 값(default)에 부여하여 조금 더 플랫한 코드를 짤 수 있음
+
+        if(gender === 'M'){
+            standHeight = MAN_STAND_HEIGHT;
+            strGender = '남자';
+        }
+        
+        if(height > standheight){
+            console.log(`${height}이면 ${strGender} 평균키보다 큽니다.`)
+        } else if(height < standheight){
+            console.log(`${height}이면 ${strGender} 평균키보다 작습니다.`)
+        } else {
+            console.log(`${height}이면 ${strGender} 평균키입니다.`)
+        }
+
+        console.log('--------------------');
+
+        // 1. 일단 남자/여자를 구분할 수 있어야 한다.
+        if(gender === 'W'){
+            // 여자였을 때는 여자값에만 집중한다.
+        } else if(gender === 'M'){
+            // 남자였을 때는 남자값에만 집중한다.
+        }
+
+        // --------------------------------------------------------------------
+
+        if(gender === 'W'){
+            if(height > 157){
+
+            } else if(height < 157){
+                
+            } else{ // 경우의 수는 3가지이기 때문에 else if일 필요가 없다.
+                
+            }
+        }else if(gender === 'M'){
+            if(height > 171){
+
+            }else if(height < 171){
+
+            }else{ // 경우의 수는 3가지이기 때문에 else if일 필요가 없다.
+
+            }
+        }
+
+            
+    </script>
+</body>
+</html>

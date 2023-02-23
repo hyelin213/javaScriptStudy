@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex07-01</title>
+</head>
+<body>
+    <h1>ex07-01.html</h1>
+    <script>
+
+        console.log(5 * 4);
+        console.log(5 / 4);
+        console.log(5 - 4);
+        console.log(5 + 4);
+        console.log(5 % 4); // mod (나눠서 나머지값 구하기)
+
+        const num = 13;
+        console.log(num % 2);
+        console.log(`${num} % 2 = ${num % 2}`);
+
+        console.log((num % 2) === 1);
+
+        var x = 1;
+        console.log(`x = ${x++}`); //이후에 수를 올리겠다.
+        // 한 라인에서 읽기와 쓰기(update)가 동시에 필요할 때 console.log 값에 증감식을 사용한다.
+        console.log(`x = ${x}`);
+
+        var y = 1;
+        console.log(`y = ${++y}`);
+        console.log(`y = ${y}`);
+
+        // 읽고 수정하는 것의 순서에 차이가 있다
+
+        var k1 = +10; //defalt
+        console.log(`k1 : ${k1}`);
+
+        var k2 = -(-10); //-1 * -10 의 의미 -> 양수 10이 된다.
+        //음수를 양수(절대값)로 변경할 때 쓰인다.
+        console.log(`k2 : ${k2}`);
+
+        var k3 = -10;
+        var result = -(k3);
+        console.log(`k3 : ${result}`);
+        
+    </script>
+</body>
+</html>

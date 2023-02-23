@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-18</title>
+    <style>
+
+        .red{ color: red; }
+        .blue{ color: blue; }
+
+    </style>
+</head>
+<body>
+    <h1>ex39-18.html</h1>
+    <ul id="fruits">
+        <li class="red">사과</li>
+        <li class="red">바나나</li>
+        <li class="red">오렌지</li>
+    </ul>
+    <script>
+
+        // const elems = document.getElementsByClassName('red');
+        const elems = document.querySelectorAll('.red');
+        console.log(elems);
+        // for(let i=0; i<elems.length; i++){
+        //     elems[i].className = 'blue'; // 교체(style에 작성되어있는 것이 넘어온다)
+        // }
+        // console.log(elems);
+
+        // live 객체
+
+        console.log('=========================================');
+
+        const arrElems = [...elems]; // real arr
+
+        // getElementsByClassName(''); => htmldomcollect가 넘어옴(forEach 사용 X)
+        // querySelectorAll('.red'); => Nodelist가 넘어옴(forEach 사용 가능함)
+        // 둘 다 유사배열이지만 다르다.
+
+        arrElems.forEach(item => {item.className = 'blue'});
+        console.log(elems);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body{ height: 100vh; }
+
+#container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container > .joinContainer{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#container > .joinContainer .row{
+    margin-bottom: 10px;
+}
+
+.joinContainer .row .title{
+    display: inline-block;
+    width: 100px;
+}
+
+#container .row:last-of-type{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.red{
+    color: red;
+}

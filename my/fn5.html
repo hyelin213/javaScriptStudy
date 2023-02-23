@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn5</title>
+</head>
+<body>
+    <h1>fn5.html</h1>
+    <script>
+
+        const maxValue = 4; //0~4 사이의 랜덤 숫자를 출력하라 (6이면 0~6)
+        
+        for(let i=0; i<500; i++){
+            const rVal = getRandom(maxValue); // 2차 가공 느낌 ->메소드->메소드->메소드 ...(9)
+            console.log(getRandom(maxValue)); // (1)
+            console.log(rVal);
+            if(rVal > maxValue || rVal < 0){
+                console.log('잘못됨!');
+                break;
+            }
+        }
+
+        // return 값이 없는 것은 void, 있는 것은 return
+
+        console.log('끝!');
+
+        function getRandom(maxVal){
+            return parseInt(Math.random() * (maxVal + 1));
+        }
+        
+    </script>
+</body>
+</html>

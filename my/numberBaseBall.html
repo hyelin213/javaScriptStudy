@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numberBaseBall</title>
+</head>
+
+<body>
+    <h1>numberBaseBall.html</h1>
+
+    <script>
+        const numArr = [0, 0, 0];
+        let i = 0;
+
+        mainLoop:
+        while(i<numArr.length){
+            const rNum = parseInt(Math.random() * 9)+ 1;
+            for(let z=0; z<i; z++){
+                if(rNum === numArr[z]){
+                    continue mainLoop;
+                }
+            }
+            numArr[i++] = rNum;
+        }
+
+        let cnt = 0;
+        while(true) {
+            cnt++;
+            const answer = prompt('숫자 세 개를 입력해 주세요. (구분은 빈 칸)');
+            //1 2 3
+            console.log(answer);
+            const answerArr = answer.split(' '); // => 문자열을 구분지어주는 기준을 만드는 함수
+            const answerNumberArr = answerArr.map(Number);
+            // map(Number) : 입력된 문자열을 숫자로 만들어 카피함
+
+            let s = 0, b = 0;
+            // 비교를 하려면 중첩 for문을 사용해야 한다.
+
+            for(let i=0; i<numArr.length; i++) {
+                for(let z=0; z<answerNumberArr.length; z++) {
+                    if(numArr[i] === answerNumberArr[z]) {
+                        if(i === z) {
+                            s++;
+                        } else {
+                            b++;
+                        }
+                    }
+                }
+            }
+            console.log(`S: ${s}, B: ${b}, O: ${numArr.length-(s + b)}`);
+
+            if(s === numArr.length) {
+                break;
+            }
+        }
+        console.log(`[ ${cnt} ]게임 종료!`);
+
+    </script>
+</body>
+
+</html>

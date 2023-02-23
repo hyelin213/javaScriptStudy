@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for-mission-5</title>
+</head>
+<body>
+    <h1>for-mission-5.html</h1>
+    <script>
+
+        // 구구단 가로 정렬
+
+        /*
+        var result = '';
+
+        for(var dan = 1 ; dan < 10 ; dan++){
+            for(var i = 2 ; i < 10 ; i++){
+                result += (`${i} x ${dan} = ${i * dan}`+('\t'));
+            }
+            console.log(result);
+            result = '';
+        }
+        */
+
+        for(var i=1; i<10; i++){
+            let str = ''; // 안에 적으면 reset 안 해도됨
+            for(var z=2; z<10; z++){ 
+                str += `${z} x ${i} = ${z * i} \t`; // \t 주면 사이드라인도 정리해줌
+            }
+            console.log(str);
+            
+            //console.log 는 무조건 개행하기 때문에 내용을 문자열(let str = '';)로 만들어 준다.
+        }
+
+    </script>
+</body>
+</html>

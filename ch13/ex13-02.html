@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13-02</title>
+</head>
+<body>
+    <h1>ex13-02.html</h1>
+    <script>
+
+        var var1 = 1;
+        if(true){
+            var var2 = 2;
+            if(true){
+                var var3 = 3;
+            }
+        }
+
+        console.log(var1);
+        console.log(var2);
+        console.log(var3);
+
+        /*
+        
+            호이스팅의 기준은 함수.
+
+            if문은 함수가 아니므로 var 선언이 function을 만나기 전까지
+            가장 위로 올라간다.
+        
+        */
+
+        console.log('========================== let');
+        // let 볼 거면 위에 거 주석하기
+
+        // let var1 = 1;
+        // if(true){
+        //     let var2 = 2; // let의 경우 해당 if문에서만 의미가 있다.
+        //     if(true){
+        //         let var3 = 3;
+        //         console.log(var3);
+        //     }
+        //     console.log(var2);
+        // }
+        // console.log(var1);
+
+        console.log('========================== function');
+
+        function foo(){
+            var var4 = 4; // 함수 안에서 이미 호이스팅이 끝난 격
+            // foo(){...} var4는 foo의 중괄호 내에서 의미가 있다.
+
+            function bar(){
+                var var5 = 5;
+                console.log('bar 안에 있는 ' + var4);
+            }
+            console.log(var4);
+            bar();
+        }
+
+        foo();
+
+
+    </script>
+</body>
+</html>

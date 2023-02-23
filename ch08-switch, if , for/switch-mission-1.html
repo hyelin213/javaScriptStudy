@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-mission-1</title>
+</head>
+<body>
+    <h1>switch-mission-1.html</h1>
+    <script>
+
+        const season = parseInt(Math.random()*14); //0~13 랜덤한 숫자
+        //Math.random() : 0~0.99999... 1은 나오지 않음
+        //Math(객체).random(메소드 호출) => 결과적으로 값이 됨
+
+
+        switch(season){
+            case 1: case 2: case 12:
+                console.log('겨울');
+                break;
+            case 3: case 4: case 5:
+                console.log('봄');
+                break;
+            case 6:
+            case 7:
+            case 8:
+                console.log('여름');
+                break;
+            case 9:
+            case 10:
+            case 11:
+                console.log('가을');
+                break;
+            default:
+                console.log('잘못된 계절입니다.');
+                break;
+        }
+
+        console.log(season);
+
+    </script>
+</body>
+</html>

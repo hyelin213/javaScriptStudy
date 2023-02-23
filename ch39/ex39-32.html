@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39-32</title>
+</head>
+<body>
+    <h1>ex39-32.html</h1>
+    <ul id="fruits">
+        <li class="apple">사과</li>
+        <li class="banana">바나나</li>
+        <li class="orange">오렌지</li>
+    </ul>
+    <script>
+
+        // 부모 노드 탐색
+
+        const bananaElem = document.querySelector('.banana');
+        const parent = bananaElem.parentNode; // 부모의 주소값이 저장되어있다.(ul)
+        
+        console.log(parent);
+        console.log(bananaElem.parentElement);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cb_hell_promise.html</title>
+</head>
+<body>
+    <h1>cb_hell_promise.html</h1>
+    <script>
+
+        function fn1(){
+            const p = new Promise(
+                function(resolve, reject){
+                    setTimeout(function(){
+                        resolve(10);
+                    }, 3000);
+                });
+                return p;
+        }
+
+        function fn2(val){
+            console.log(val * 2);
+        }
+
+        const promise = fn1();
+        promise
+        .then(function(val){
+            console.log('then: ' + val);
+            fn2(val); 
+        })
+
+        /*
+        .then(function(val){
+            console.log('then: ' + val);
+            return val; // Promise 객체로 감싸짐
+        }) // return val;을 함으로서 새로운 Promise로 만들어짐
+        // then에서 return하는 경우는 거의 없다.
+        */
+
+        .then(fn2)
+        .catch(function(val){
+            console.log('catch: ' + val);
+        })
+        // 체이닝 기법
+        // promise.then(function(성공 통신 결과값){}).catch(function(실패 통신 결과값){})
+
+    </script>
+</body>
+</html>
